@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/deno";
+import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,14 +9,15 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
+    <div className="mt-10 text-center">
+      <h1 className="my-4 text-2xl">Welcome to Remix</h1>
       <ul>
         <li>
           <a
             target="_blank"
             href="https://remix.run/tutorials/blog"
             rel="noreferrer"
+            className="underline"
           >
             15m Quickstart Blog Tutorial
           </a>
@@ -26,12 +27,18 @@ export default function Index() {
             target="_blank"
             href="https://remix.run/tutorials/jokes"
             rel="noreferrer"
+            className="underline"
           >
             Deep Dive Jokes App Tutorial
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
+          <a
+            target="_blank"
+            href="https://remix.run/docs"
+            rel="noreferrer"
+            className="underline"
+          >
             Remix Docs
           </a>
         </li>
